@@ -4,7 +4,6 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
@@ -24,7 +23,6 @@ public class Pokedex extends Application {
         hakuKentta.setTranslateY(-100);
 
         //String haettuPoke = hakuKentta.getText();
-
         Button hakuNappi = new Button();
         hakuNappi.setText("Hae");
         hakuNappi.setTranslateY(-100);
@@ -34,6 +32,10 @@ public class Pokedex extends Application {
             @Override
             public void handle(ActionEvent event) {
                 System.out.println("testi" + hakuKentta.getText());
+                Yhdista yhdista = new Yhdista();
+
+                String haettuPokemon = yhdista.haePokemoneja();
+                System.out.println(haettuPokemon);
             }
         });
 
@@ -62,6 +64,7 @@ public class Pokedex extends Application {
 
     public static void main(String[] args) {
         launch(args);
+
     }
 
 }
