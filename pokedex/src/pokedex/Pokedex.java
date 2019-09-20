@@ -34,7 +34,7 @@ public class Pokedex extends Application {
                 System.out.println("testi" + hakuKentta.getText());
                 Yhdista yhdista = new Yhdista();
 
-                String haettuPokemon = yhdista.haePokemoneja();
+                String haettuPokemon = yhdista.haePokemoneja(); // haha jvitutuji m- oon kni ii bitu nkännissäs ;DDDDDDDDDDDDDDDDDDDDDDDDDdd 
                 System.out.println(haettuPokemon);
             }
         });

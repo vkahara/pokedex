@@ -13,7 +13,9 @@ public class Yhdista {
         try {
             Connection yhteys = DriverManager.getConnection("jdbc:h2:~/test", "sa", "");
 
+            
             Statement statement = yhteys.createStatement();
+            
 
             String hae = "select * from pokemonit where nimi = 'Pikachu'";
 
