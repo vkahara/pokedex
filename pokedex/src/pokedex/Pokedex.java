@@ -11,6 +11,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 
 public class Pokedex extends Application {
+    
 
     @Override
     public void start(Stage primaryStage) {
@@ -31,10 +32,14 @@ public class Pokedex extends Application {
         hakuNappi.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                System.out.println("testi" + hakuKentta.getText());
+
+                //System.out.println("testi" + hakuKentta.getText());
+                
+                
+                
                 Yhdista yhdista = new Yhdista();
 
-                String haettuPokemon = yhdista.haePokemoneja(); // haha jvitutuji m- oon kni ii bitu nkännissäs ;DDDDDDDDDDDDDDDDDDDDDDDDDdd 
+                String haettuPokemon = yhdista.haePokemoneja();
                 System.out.println(haettuPokemon);
             }
         });
