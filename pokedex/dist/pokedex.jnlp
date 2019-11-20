@@ -8,8 +8,8 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="lib\h2-1.4.199.jar" size="2166760" download="eager" />
-    <jar href="pokedex.jar" size="216596" download="eager" />
+    <jar href="lib\h2-1.4.200.jar" size="2292560" download="eager" />
+    <jar href="pokedex.jar" size="216377" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="pokedex" >
     <param name="requiredFXVersion" value="8.0+"/>

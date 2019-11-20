@@ -11,7 +11,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 
 public class Pokedex extends Application {
-    
 
     @Override
     public void start(Stage primaryStage) {
@@ -28,22 +27,27 @@ public class Pokedex extends Application {
         hakuNappi.setText("Hae");
         hakuNappi.setTranslateY(-100);
         hakuNappi.setTranslateX(-30);
+        
+        Yhdista yhdista = new Yhdista();
 
         hakuNappi.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
 
                 //System.out.println("testi" + hakuKentta.getText());
-                
-                
-                
-                Yhdista yhdista = new Yhdista();
+                Yhdista yhdistaNappi = new Yhdista();
 
-                String haettuPokemon = yhdista.haePokemoneja();
+                String haettuPokemon = yhdistaNappi.haePokemoneja(hakuKentta.getText());
                 System.out.println(haettuPokemon);
+                
+
             }
         });
 
+        String haettuPokemon = yhdista.haePokemoneja(hakuKentta.getText());
+        System.out.println(haettuPokemon);
+     
+    
         Label otsikko = new Label("Valtsun MAHTAVA Pokédex applikaatio!");
         otsikko.setStyle("-fx-font-size: 30px");
         otsikko.setTranslateY(-180);

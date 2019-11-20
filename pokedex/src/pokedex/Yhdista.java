@@ -8,7 +8,7 @@ import java.sql.DriverManager;
 public class Yhdista {
     
 
-    public String haePokemoneja() {
+    public String haePokemoneja(String pokemon) {
 
         try {
 
@@ -16,9 +16,10 @@ public class Yhdista {
             
             String haePokemoneja = "";
 
-            Connection yhteys = DriverManager.getConnection("jdbc:h2:~/pokemonit", "sa", "");
+            Connection yhteys = DriverManager.getConnection("jdbc:h2:./pokemonit", "sa", "");
 
-            PreparedStatement statement = yhteys.prepareStatement("SELECT * FROM Pokemonit WHERE nimi= 'Gyarados'");
+            PreparedStatement statement = yhteys.prepareStatement("SELECT * FROM Pokemonit WHERE nimi = ?");
+            statement.setString(1,pokemon);
 
             //String hae = "select * from pokemonit where nimi = 'Pikachu'";
             ResultSet rs = statement.executeQuery();
