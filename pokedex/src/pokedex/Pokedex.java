@@ -3,12 +3,14 @@ package pokedex;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
+import javafx.scene.text.TextAlignment;
 
 public class Pokedex extends Application {
 
@@ -27,27 +29,27 @@ public class Pokedex extends Application {
         hakuNappi.setText("Hae");
         hakuNappi.setTranslateY(-100);
         hakuNappi.setTranslateX(-30);
-        
-        Yhdista yhdista = new Yhdista();
+
+        Label tulostaPokemon = new Label("Huom. Pokemonien nimet alkavat isolla kirjaimella.");
+        tulostaPokemon.setStyle("-fx-font-size: 16px;");
+        tulostaPokemon.setTranslateY(-70);
+        tulostaPokemon.setTranslateX(-90);
 
         hakuNappi.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
 
                 //System.out.println("testi" + hakuKentta.getText());
-                Yhdista yhdistaNappi = new Yhdista();
+                Yhdista yhdista = new Yhdista();
 
-                String haettuPokemon = yhdistaNappi.haePokemoneja(hakuKentta.getText());
+                String haettuPokemon = yhdista.haePokemoneja(hakuKentta.getText());
                 System.out.println(haettuPokemon);
-                
+
+                tulostaPokemon.setText(haettuPokemon);
 
             }
         });
 
-        String haettuPokemon = yhdista.haePokemoneja(hakuKentta.getText());
-        System.out.println(haettuPokemon);
-     
-    
         Label otsikko = new Label("Valtsun MAHTAVA Pokédex applikaatio!");
         otsikko.setStyle("-fx-font-size: 30px");
         otsikko.setTranslateY(-180);
@@ -56,8 +58,9 @@ public class Pokedex extends Application {
         selite.setStyle("-fx-font-size: 14px");
         selite.setTranslateY(-140);
         selite.setTranslateX(-115);
-
-        root.getChildren().addAll((otsikko), (selite), (hakuKentta), (hakuNappi));
+        
+        root.getChildren().addAll((otsikko), (selite), (tulostaPokemon), (hakuKentta), (hakuNappi));
+        
 
         root.setId("pane");
 
