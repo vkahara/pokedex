@@ -45,7 +45,12 @@ public class Pokedex extends Application {
                 String haettuPokemon = yhdista.haePokemoneja(hakuKentta.getText());
                 System.out.println(haettuPokemon);
 
-                tulostaPokemon.setText(haettuPokemon);
+                if (haettuPokemon.equals(""))  {
+                    tulostaPokemon.setText("Pokemonia ei tunnistettu. Tarkista kirjoitusasu.\n Pokemonien nimet kirjoitetaan isolla");
+                } else {
+                    tulostaPokemon.setText(haettuPokemon);
+
+                }
 
             }
         });
@@ -58,9 +63,8 @@ public class Pokedex extends Application {
         selite.setStyle("-fx-font-size: 14px");
         selite.setTranslateY(-140);
         selite.setTranslateX(-115);
-        
+
         root.getChildren().addAll((otsikko), (selite), (tulostaPokemon), (hakuKentta), (hakuNappi));
-        
 
         root.setId("pane");
 
