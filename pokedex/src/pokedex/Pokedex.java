@@ -47,6 +47,7 @@ public class Pokedex extends Application {
 
                 if (haettuPokemon.equals(""))  {
                     tulostaPokemon.setText("Pokemonia ei tunnistettu. Tarkista kirjoitusasu.\n Pokemonien nimet kirjoitetaan isolla");
+                    System.out.println("ei tunnistettu");
                 } else {
                     tulostaPokemon.setText(haettuPokemon);
 

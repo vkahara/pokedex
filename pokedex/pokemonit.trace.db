@@ -986,3 +986,6 @@ Caused by: java.lang.IllegalStateException: An old transaction with the same id 
 2019-11-20 11:24:03 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "POKEMONITKUVAT" already exists; SQL statement:
 CREATE table Pokemonitkuvat (ID INT PRIMARY KEY, IMGDEX INT, KUVAT BLOB, FOREIGN KEY (imgdex) references pokemonit(ndex)) [42101-200]
+2019-11-26 12:50:53 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE POKEMONITKUVAT (ID INT PRIMARY KEY, IMGDEX INT FOREIGN[*] KEY, KUVAT BLOB)"; expected "(, FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE table Pokemonitkuvat (ID INT PRIMARY KEY, IMGDEX INT FOREIGN KEY, KUVAT BLOB) [42001-200]
