@@ -7,3 +7,4 @@ Alustavat suunnitelmat ovat:
 -Toiminto siirtyä pokemonista seuraavaan ja edelliseen napeilla.
 -Toiminto siirtyä satunnaiseen pokemoniin.
 -Tulostaa käyttöliittymälle pokemonin tiedot ja kuvan.
+
