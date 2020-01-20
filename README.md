@@ -1,5 +1,9 @@
-# pokedex
-Ohjelmiston tuotatontaversion toteuttamisen lopputyö.
+Pokedex applikaatio - Valtteri Kähärä 2020
 
-SQL-Tietokanta ensimmäisen generaation pokemoneista sekä java ohjelma pokemonien hakemiseen.
-Lisäksi tarkoitus olisi luoda 'Suosikki pokemonit' -tietokanta, johon voisi lisätä omia suosikki pokemonejaan.
+
+Alustavat suunnitelmat ovat: 
+-Hae pokemoneja tietokannasta nimellä tai ndex numerolla.
+-Lisää ja poista pokemoneja suosikki pokemonit- tietokannasta.
+-Toiminto siirtyä pokemonista seuraavaan ja edelliseen napeilla.
+-Toiminto siirtyä satunnaiseen pokemoniin.
+-Tulostaa käyttöliittymälle pokemonin tiedot ja kuvan.

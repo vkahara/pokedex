@@ -3,14 +3,14 @@ package pokedex;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
-import javafx.scene.text.TextAlignment;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 public class Pokedex extends Application {
 
@@ -64,8 +64,18 @@ public class Pokedex extends Application {
         selite.setStyle("-fx-font-size: 14px");
         selite.setTranslateY(-140);
         selite.setTranslateX(-115);
+        
+        //kuvan tulostamisen testausta -->  Kuvan tulostaminen internet linkistä toimii, mutta
+        // kuvan hakeminen paikallisesta polusta ei onnistu TODO: selvitä miten kuvia haetaan paikallisesta polusta.
+        String kuvaPolku = "https://docs.oracle.com/javafx/javafx/images/javafx-documentation.png";
+        Image image = new Image(kuvaPolku,100,100,false,true);
+        
+        ImageView ImageView = new ImageView(image);
+        
+        
+        //<---
 
-        root.getChildren().addAll((otsikko), (selite), (tulostaPokemon), (hakuKentta), (hakuNappi));
+        root.getChildren().addAll((otsikko), (selite), (tulostaPokemon), (hakuKentta), (hakuNappi), (ImageView));
 
         root.setId("pane");
 
